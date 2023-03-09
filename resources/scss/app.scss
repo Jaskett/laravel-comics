@@ -1,1 +1,172 @@
 @import "~bootstrap/scss/bootstrap";
+@import 'partials/mixins';
+@import 'partials/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    height: 95px;
+    line-height: 95px;
+
+    .container {
+        height: 100%;
+        @include flex ($type: 'both');
+
+        .logo {
+            display: flex;
+        }
+
+        .logo img {
+            height: 65px;
+            line-height: 65px;
+        }
+
+        nav ul {
+            display: flex;
+
+            li {
+                font-size: $font-medium;
+                padding-inline: 15px;
+
+                &:hover,
+                &.active {
+                    border-bottom: 6px solid $primary;
+                }
+
+                a {
+                    color: $text-nav;
+                }
+            }
+        }
+    }
+}
+
+.merchandise {
+    background-color: $primary;
+    height: 125px;
+
+    .container {
+        @include flex ($type: 'both');
+        height: 100%;
+        padding: 10px 40px;
+
+        li {
+            @include flex ($type: 'center');
+            padding-inline: 10px;
+
+            img {
+                height: 50px;
+            }
+
+            a {
+                padding-left: 5px;
+                font-size: $font-medium;
+                color: $text-white;
+            }
+        }
+    }
+}
+
+footer {
+    .links {
+        background-image: url(/resources/img/footer-bg.jpg);
+        background-size: cover;
+        color: $text-white;
+
+        .container {
+            @include flex ($type: 'both');
+            position: relative;
+            overflow: hidden;
+
+            .ms_cols {
+                display: flex;
+
+                .ms_col {
+                    padding: 30px 0;
+
+                    .ms_mt_top {
+                        margin-top: 20px;
+                    }
+
+                    a {
+                        color: #f5f5f5;
+                        font-size: $font-small;
+                    }
+
+                    &.ms_center {
+                        padding-inline: 30px;
+                    }
+                }
+            }
+
+            .bg-logo {
+                width: 500px;
+                height: 350px;
+            }
+
+            .bg-logo img {
+                position: absolute;
+                right: 0;
+                top: -80px;
+            }
+        }
+    }
+
+    .sub-footer {
+        height: 90px;
+        background-color: #303030;
+
+        .container {
+            @include flex ($type: 'both');
+            height: 100%;
+
+            .sign-up {
+                color: $text-white;
+                padding: 10px;
+                border: 2px solid $primary;
+            }
+
+            .social {
+                @include flex ($type: 'center');
+
+                ul {
+                    @include flex ($type: 'center');
+
+                    li {
+                        padding: 0 10px;
+                    }
+                }
+
+                span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
