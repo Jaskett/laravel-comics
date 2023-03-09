@@ -119,7 +119,19 @@
 
                 <ul>
                     <li>
-                        <img>
+                        <img src="{{ Vite::asset('resources/img/footer-facebook.png') }}" alt="">
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/footer-twitter.png') }}" alt="">
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/footer-youtube.png') }}" alt="">
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}" alt="">
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/footer-periscope.png') }}" alt="">
                     </li>
                 </ul>
             </div>
