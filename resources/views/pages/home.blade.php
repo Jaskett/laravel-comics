@@ -217,6 +217,10 @@ $cards = [
 
 @extends('layouts.main-layout')
 
+@section('title')
+    <title>Home Comics</title>
+@endsection
+
 @section('content')
     <main>
         <div class="container">
