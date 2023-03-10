@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @vite('resources/js/app.js')
+    @yield('head')
 </head>
 <body>
     @include('components/header')
+    @yield('content')
     @include('components/bluesection')
     @include('components/footer')
 </body>
